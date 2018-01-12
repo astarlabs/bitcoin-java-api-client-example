@@ -23,6 +23,10 @@ Todas as bibliotecas podem ser obtidas no site https://mvnrepository.com/
 
 Aqui uma lista dos problemas que podem ocorrer ao se utilizar uma API assíncrona
 
+## Token used before issued
+
+Caso a API retorne este erro, verifique o relógio da sua máquina, normalmente é um problema de sincronismo entre o relógio da sua máquina e o relógio do servidor.
+
 ## API não retorna
 
 Verifique se você está utilizando algum proxy, ou existe alguma restrição na sua rede, você está utilizando uma **VPN**.
