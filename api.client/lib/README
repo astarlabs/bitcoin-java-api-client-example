@@ -1,0 +1,1 @@
+mvn install:install-file -Dfile=bitcoin-java-api-client-1.1.2.jar -DgroupId=com.astarlabs -DartifactId=bitcoin-java-api-client -Dversion=1.1.2 -Dpackaging=jar

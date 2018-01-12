@@ -33,9 +33,9 @@ public class App {
 		
 		App application = new App();
 		
-//		application.registrarNovoDocumento();
+		application.registrarNovoDocumento();
 		
-		application.registrarDocumentoExistente();
+//		application.registrarDocumentoExistente();
 		
 //		application.consultarPorProtocolo(1832);
 	}
