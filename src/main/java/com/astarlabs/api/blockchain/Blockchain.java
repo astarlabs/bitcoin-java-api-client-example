@@ -61,7 +61,7 @@ public class Blockchain {
 		token = getMyToken();
 
 		SendApi api = new SendApi();
-		SingleResult singleResult = api.sendHash(token, account, user, pass, hash, Constantes.COIN, Constantes.TESTNET); 
+		SingleResult singleResult = api.sendHash(token, account, user, pass, hash, Constantes.BLOCKCHAIN_NETWORK, Constantes.TESTNET); 
 
 		if (singleResult.getResult() != null && singleResult.getStatus()) {
 			return singleResult.getResult();

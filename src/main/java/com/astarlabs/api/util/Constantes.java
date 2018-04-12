@@ -1,5 +1,7 @@
 package com.astarlabs.api.util;
 
+import br.com.astarlabs.client.model.BlockchainNetwork;
+
 /**
  * Classe de constantes do sistema.
  * @author lmonteiro
@@ -32,7 +34,7 @@ public class Constantes {
 	/**
 	 * Informar a rede onde havera o registro
 	 */
-	public static final String COIN = "ethereum";
+	public static final BlockchainNetwork BLOCKCHAIN_NETWORK = BlockchainNetwork.ETHEREUM;
 	
 	/**
 	 * Para este cliente apenas aceitamos TESTNET = 1

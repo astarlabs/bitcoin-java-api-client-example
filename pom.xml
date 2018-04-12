@@ -3,12 +3,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.astarlabs</groupId>
-	<artifactId>api.client</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>blockchain-java-api-client-example</artifactId>
+	<name>blockchain-java-api-client-example</name>
+	<version>1.1</version>
 	<packaging>jar</packaging>
-
-	<name>api.client</name>
-	<url>http://maven.apache.org</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -28,86 +26,63 @@
 			<timezone>-3</timezone>
 		</developer>
 
+		<developer>
+			<id>JC</id>
+			<name>JC Bombardelli</name>
+			<organization>ASTAR</organization>
+			<organizationUrl>https://github.com/jcbombardelli</organizationUrl>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone>-3</timezone>
+		</developer>
+
 	</developers>
 
+	<repositories>
+		<repository>
+			<id>astarlabs-maven-repo</id>
+			<url>https://mymavenrepo.com/repo/LkfjrFnMHsJ7GZmQVlh7/</url>
+		</repository>
+	</repositories>
+
 	<dependencies>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
-			<scope>test</scope>
-		</dependency>
 
 		<dependency>
 			<groupId>com.astarlabs</groupId>
-			<artifactId>bitcoin-java-api-client</artifactId>
-			<version>1.1.2</version>
+			<artifactId>blockchain-java-api-client</artifactId>
+			<version>1.2.1</version>
 			<scope>compile</scope>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.bitbucket.b_c/jose4j -->
+		<!-- https://mvnrepository.com/artifact/commons-lang/commons-lang -->
 		<dependency>
-			<groupId>org.bitbucket.b_c</groupId>
-			<artifactId>jose4j</artifactId>
-			<version>0.5.5</version>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.6</version>
 		</dependency>
 
-
-		<!-- https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk15on -->
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-io -->
 		<dependency>
-			<groupId>org.bouncycastle</groupId>
-			<artifactId>bcprov-jdk15on</artifactId>
-			<version>1.56</version>
-		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/com.squareup.okio/okio -->
-		<dependency>
-			<groupId>com.squareup.okio</groupId>
-			<artifactId>okio</artifactId>
-			<version>1.6.0</version>
-		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/com.squareup.okhttp/okhttp -->
-		<dependency>
-			<groupId>com.squareup.okhttp</groupId>
-			<artifactId>okhttp</artifactId>
-			<version>2.7.5</version>
-		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
-		<dependency>
-			<groupId>com.google.code.gson</groupId>
-			<artifactId>gson</artifactId>
-			<version>2.2.4</version>
-		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/joda-time/joda-time -->
-		<dependency>
-			<groupId>joda-time</groupId>
-			<artifactId>joda-time</artifactId>
-			<version>2.9.3</version>
-		</dependency>
-
-		<dependency>
-			<groupId>commons-beanutils</groupId>
-			<artifactId>commons-beanutils</artifactId>
-			<version>1.9.3</version>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>1.3.2</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
-			<version>3.4</version>
+			<version>3.7</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+
 		<dependency>
-			<groupId>commons-io</groupId>
-			<artifactId>commons-io</artifactId>
-			<version>2.6</version>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
 		</dependency>
-
 
 	</dependencies>
 </project>

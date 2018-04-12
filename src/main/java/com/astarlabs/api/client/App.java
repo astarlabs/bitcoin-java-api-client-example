@@ -7,10 +7,10 @@ import static com.astarlabs.api.util.Constantes.PRIVATE_KEY;
 import static com.astarlabs.api.util.Constantes.ZERO;
 
 import java.io.File;
-import java.nio.charset.Charset;
 import java.nio.file.Files;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang.RandomStringUtils;
 import org.apache.commons.lang3.reflect.FieldUtils;
 
 import com.astarlabs.api.blockchain.Blockchain;
@@ -20,23 +20,27 @@ import br.com.astarlabs.client.model.Transaction;
 /**
  * Esta é uma classe de exemplo contendo todos os metodos da API.
  * @author asimas
- * @since
+ * @since 11/01/2018
  * @version 1.0
+ * 
+ * @author jcbombardelli
+ * @since 12/04/2018
+ * @version 1.1
  */
 public class App {
-	
-	
+		
 	private String numeroProtocolo;
+	private static String textoParaRegistro;
 	
 	public static void main(String[] args) {
-		System.out.println("Registrar um documento existente");
+		
+		if(args == null || args.length == 0)
+			textoParaRegistro = RandomStringUtils.random(10);
+		
+		System.out.println("Registrar um \"documento\"");
 		
 		App application = new App();
-		
 		application.registrarNovoDocumento();
-		
-//		application.registrarDocumentoExistente();	
-//		application.consultarPorProtocolo(1832);
 	}
 	
 	/**
@@ -47,11 +51,14 @@ public class App {
 		File arquivoNaoRegistrado = null;
 		
 		try{
+			long timestamp = System.currentTimeMillis();
 			
-			arquivoNaoRegistrado =  File.createTempFile("teste", "txt");
+			arquivoNaoRegistrado =  File.createTempFile(String.format("%s", timestamp), "txt");
 			arquivoNaoRegistrado.createNewFile();
 			
-			FileUtils.writeStringToFile(arquivoNaoRegistrado, "Hello File " + System.currentTimeMillis(),  Charset.defaultCharset(), false);
+			FileUtils.writeStringToFile(
+					arquivoNaoRegistrado, String.format("Hello File %s \n %s", System.currentTimeMillis(), textoParaRegistro));
+		
 		}catch(Exception e){
 			System.out.println("O arquivo não pode ser criado");
 			return;
